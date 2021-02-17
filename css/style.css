@@ -1,0 +1,364 @@
+*{
+ padding: 0;
+ margin: 0;
+}
+body{
+ background: black;
+ color: white;
+ box-sizing: border-box;
+ 
+}
+#mode {
+ border: 2px solid white;
+ background:black;
+ color: white;
+
+ padding: 1vw;
+ font-size: 1em;
+
+ position: absolute;
+ left: 1%;
+ top: 1%;
+}       
+button {
+ color: black;
+ display: block;
+ font-family: "Saira Stencil One", cursive;
+
+ letter-spacing: 1px;
+ min-width: 15vw;
+ margin: 5px;
+ cursor: pointer;
+ transition: all 0.35s linear;
+}
+button:hover {
+ box-shadow: inset 0px 45px white;
+ color: black !important;
+}
+header {
+ padding: 3vw;
+ text-align: center;
+ width: 70%;
+ border: 2px dashed white;
+ border-radius: 10px;
+ margin: 10vw auto 2vw auto;
+}
+header h1{
+ font-family: 'Press Start 2P', cursive;
+}
+header h4{
+ font-size: 1.4em;
+}
+
+.misc a{
+ text-decoration: none;
+ color: white;
+}
+.misc,.social{
+ display: flex;
+}
+
+/* Turtle - Pure css by Alpha_Fiend aka Ankit Sharma */
+.icons{
+ display: flex;
+ justify-content:space-evenly ;
+ margin: 1vw;
+ font-size: 3vw;
+}
+#line{
+ position: absolute;
+ top: 17vh;
+
+ margin-left: 3.5vw;
+ height: 95%;
+ border-radius: 10px;
+ background: inherit;
+ border: 1px solid white;
+ width: fit-content;
+}
+
+@keyframes move{
+  0%{
+    transform: rotatez(0deg);
+  }
+  15%{
+    transform: rotatez(180deg);
+  }
+  50%{
+    transform: translateY(100vh) rotatez(180deg);
+  }
+  70%{
+    transform: translateY(100vh);
+  }
+  100%{
+    transform: rotatez(0deg);
+  }
+ }
+.turtle{
+ position: absolute;
+ top: 20vh;
+ 
+ margin-left: 1.5vw;
+ height: 5vw;
+ width: 5vw;
+ 
+ border-radius: 50%;  
+ background: inherit;
+ animation: move 10s infinite;
+ animation-timing-function: linear;
+
+}
+
+
+@keyframes legtl {
+ 0%{
+   transform: rotatez(0deg);
+ }
+ 25%{
+   transform: rotatez(-30deg);
+ }
+ 50%{
+   transform: rotatez(-60deg);
+ }
+ 75%{
+   transform: rotatez(-30deg);
+ }
+ 100%{
+   transform: rotatez(-0deg);
+ }
+}
+@keyframes legtr {
+ 0%{
+   transform: rotatez(0deg);
+ }
+ 25%{
+   transform: rotatez(30deg);
+ }
+ 50%{
+   transform: rotatez(60deg);
+ }
+ 75%{
+   transform: rotatez(30deg);
+ }
+ 100%{
+   transform: rotatez(0deg);
+ }
+}
+@keyframes legbl {
+ 0%{
+   transform: rotatez(-100deg);
+ }
+ 25%{
+   transform: rotatez(-130deg);
+ }
+ 50%{
+   transform: rotatez(-160deg);
+ }
+ 75%{
+   transform: rotatez(-130deg);
+ }
+ 100%{
+   transform: rotatez(-100deg);
+ }
+}
+@keyframes legbr {
+ 0%{
+   transform: rotatez(100deg);
+ }
+ 25%{
+   transform: rotatez(130deg);
+ }
+ 50%{
+   transform: rotatez(160deg);
+ }
+ 75%{
+   transform: rotatez(130deg);
+ }
+ 100%{
+   transform: rotatez(100deg);
+ }
+}
+
+.turtle div:nth-child(1){
+ position: absolute;
+ left: 2px;
+ top: 0;
+
+ width: 8px;
+ height: 20px;
+      
+ background: green;
+ border-radius: 10px;
+ box-sizing: border-box;
+
+ animation: legtl 0.7s infinite;
+ animation-timing-function: linear; 
+}
+
+.turtle div:nth-child(2){
+ position: absolute;
+ right: 2px;
+ top: 0;
+
+ width: 8px;
+ height: 20px;
+ 
+ background: green;
+ border-radius: 10px;
+ box-sizing: border-box;
+ 
+ animation: legtr 0.7s infinite;
+ animation-timing-function: linear; 
+}
+.turtle div:nth-child(3){
+ position: absolute;
+ bottom: 0;
+ left: 3px;
+
+ width: 8px;
+ height: 20px;
+ 
+ background: green;
+ border-radius: 10px;
+ box-sizing: border-box;
+ 
+ animation: legbl 0.7s infinite;
+ animation-timing-function: linear; 
+}
+.turtle div:nth-child(4){
+ position: absolute;
+ bottom: 0;
+ right: 3px;
+
+ width: 8px;
+ height: 20px;
+ 
+ background: green;
+ border-radius: 10px;
+ box-sizing: border-box;
+ 
+ animation: legbr 0.7s infinite;
+ animation-timing-function: linear; 
+}
+.turtle div:nth-child(5){
+ position: absolute;
+ bottom: -35%;
+ right: 45%;
+ 
+ width: 5px;
+ height: 25px;
+ border-radius: 1px;
+ border: 0.8px solid white;
+}
+.turtle div:nth-child(6){
+ position: absolute;
+ top: -45%;
+ right: 32%;
+ 
+ /* eyes align */
+ text-align: center;
+
+ width: 14px;
+ height: 25px;
+ padding-bottom: 10px;
+ border: 2px solid white;
+ border-top-left-radius: 40%;
+ border-top-right-radius: 40%;
+}
+
+
+/* Ends */
+
+.v-rule{
+ background: white;
+ border-radius: 20vw;
+ margin: 5px;
+ width: fit-content;
+}
+.social{
+ margin-top:10vw ;
+}
+.social-inner{
+ width: 3.5vw;
+ height: 3.5vw;
+ margin: 0 2vw;
+ border: 2px double white;
+ transform: rotate(-20deg) skew(25deg);
+}
+.social-inner span{
+ box-sizing: border-box;
+ position: relative;
+ top: 0;
+ left: 0;
+ 
+ text-indent: 0.8vw;
+ padding-top: 0.5vw;
+ font-size: 2em;
+ width: 100%;
+ height: 100%;
+ transition: all 0.15s linear;
+}
+
+.social-inner:hover a span:nth-child(2){
+ color: black;
+ background: rgba(204, 203, 203, 0.908);
+ transform: translate(20px,-20px);
+}
+.social-inner:hover a span:nth-child(1){
+ transform: translate(10px,-10px);
+}
+
+
+
+
+
+
+.container{
+ display: flex;
+ flex-wrap: wrap;
+ justify-items:  center;
+ justify-content: space-evenly;
+ margin: 3vw auto;
+ 
+ width: 70%;
+ padding: 1vw;
+ text-align: center;
+ border-radius: 20px;
+}
+
+.content a{
+ text-decoration: none;
+ color:ivory;
+}
+.content {
+ box-sizing: border-box;
+ width: 40%;
+ height: 11vw;
+ margin: 1.5vw;
+ padding: 1vw;
+ text-align: center;
+ border: 2px solid white;
+ text-decoration: none;
+ font-size: 1.2em;
+}
+.aboutme,
+.misc {
+ margin: 2vw;
+ width: 50%;
+}
+.extras{
+ position: absolute;
+ right: 2vw;
+}
+
+footer {
+ margin: 2px;
+ font-size: 1em;
+ border: 2px dashed white;
+ justify-content: space-between;
+ display: flex;
+}
+
+
+
+

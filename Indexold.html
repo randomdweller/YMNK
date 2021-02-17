@@ -1,0 +1,29 @@
+<script>
+const CLASSES = {
+  MAC: 'mac',                            
+  WIN: 'win',                            // Applies Windows specific properties.
+  MOUSE_NAVIGATION: 'mouse-navigation',  // Removes blue focus ring.
+};
+
+utils.disableOutlineOnMouseClick = function(element) {
+  element.addEventListener('mousedown', () => {
+    element.classList.add(CLASSES.MOUSE_NAVIGATION);
+    element.addEventListener('blur', () => {
+      element.classList.remove(CLASSES.MOUSE_NAVIGATION);
+    }, {once: true});
+  });
+};
+
+utils.isSchemeAllowed = function(url) {
+  return url.startsWith('http://') || url.startsWith('https://') ||
+      url.startsWith('ftp://') || url.startsWith('chrome-extension://');
+};
+
+utils.setPlatformClass = function(element) {
+  element.classList.toggle(
+      CLASSES.WIN, navigator.userAgent.indexOf('Windows') > -1);
+  element.classList.toggle(
+      CLASSES.MAC, navigator.userAgent.indexOf('Mac') > -1);
+};
+
+</script>
